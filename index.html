@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лига Банк - Главная страница</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-container">
+            <div class="logo"><img src="img/svg/logo.svg" alt="лого"></div>
+            
+            <!-- Бургер-иконка для мобильных -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Рассчитать кредит</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                </ul>
+            </nav>
+            
+            <button class="login-btn" id="loginBtn" title="Войти в Интернет-банк">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span class="login-btn-text">Войти в Интернет-банк</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Модальное окно входа -->
+    <div class="modal" id="loginModal">            
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal"><i class="bi bi-x-lg"></i></span>
+            <div class="logo_modal-popup">
+                <img src="img/svg/popup-logo.svg" alt="лого">
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Логин</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required>
+                        <span class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Слайдер -->
+    <div class="slider">
+        <div class="slide active" id="slide1" style="background-image: url('../img/slider-bg-girl@2x.jpg')">
+            <div class="slide-content">
+                <h2>Лига Банк</h2>
+                <p>Всегда рядом</p>
+                <div class="slide-btns">
+                    <a href="#branches" class="slide-btn">Найти отделение</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide2"  style="background-image: url('../img/slider-bg-man@2x.jpg')">
+            <div class="slide-content">
+                <h2>Лига Банк</h2>
+                <p>Ваша уверенность в завтрашнем дне</p>
+            </div>
+        </div>
+        <div class="slide" id="slide3"  style="background-image: url('../img/slider-bg-main@2x.jpg')">
+            <div class="slide-content">
+                <h2>Лига Банк</h2>
+                <p>Кредиты на любой случай</p>
+                <div class="slide-btns">
+                    <a href="#calculator" class="slide-btn">Рассчитать кредит</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+        </div>
+    </div>
+
+    <!-- Услуги (табы) -->
+    <section class="services">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="deposits"><img src="img/svg/icon-blue-vault.svg" alt="иконка">Вклады</button>
+                <button class="tab-btn" data-tab="credits"><img src="img/svg/icon-blue-cards.svg" alt="иконка">Кредиты</button>
+                <button class="tab-btn" data-tab="insurance"><img src="img/svg/icon-blue-security.svg" alt="иконка">Страхование</button>
+                <button class="tab-btn" data-tab="online"><img src="img/svg/icon-blue-phone.svg" alt="иконка">Онлайн-сервисы</button>
+            </div>
+            <div class="tab-content active" id="deposits">
+                <div class="tab-content-description">
+                    <h3>Вклады Лига Банка</h3>
+                    <ul>
+                        <li>До 7% годовых на сбережения</li>
+                        <li>Гарантированная защита вкладов</li>
+                        <li>Возможность пополнения и снятия средств</li>
+                        <li>Начисление процентов на банковскую карту</li>
+                    </ul>
+                    <a href="#" class="learn-more">Узнать подробнее</a>
+                </div>
+                <div class="tab-content-img">
+                    <img src="img/content/tab-piggybank-desctop@1x.jpg" alt="картинка">
+                </div>
+                
+            </div>
+            <div class="tab-content" id="credits">
+                <div class="tab-content-description">
+                    <h3>Кредитные продукты</h3>
+                    <ul>
+                        <li>Ипотечное кредитование от 9.6%</li>
+                        <li>Автокредиты от 3.5%</li>
+                        <li>Потребительские кредиты от 14.5%</li>
+                        <li>Рефинансирование существующих кредитов</li>
+                    </ul>
+                    <a href="#" class="learn-more">Узнать подробнее</a>
+                </div>
+                <div class="tab-content-img">
+                    <img src="img/content/tab-car-desctop@1x.jpg" alt="картинка">
+                </div>
+            </div>
+            <div class="tab-content" id="insurance">
+                <div class="tab-content-description">
+                    <h3>Страховые продукты</h3>
+                    <ul>
+                        <li>Страхование имущества</li>
+                        <li>Страхование жизни и здоровья</li>
+                        <li>Автострахование (КАСКО, ОСАГО)</li>
+                        <li>Страхование путешествий</li>
+                    </ul>
+                    <a href="#" class="learn-more">Узнать подробнее</a>
+                </div>
+                <div class="tab-content-img">
+                    <img src="img/content/tab-padlock-desctop@1x.jpg" alt="картинка">
+                </div>
+            </div>
+                <div class="tab-content" id="online">
+                    <div class="tab-content-description">
+                    <h3>Онлайн-сервисы</h3>
+                    <ul>
+                        <li>Интернет-банкинг и мобильное приложение</li>
+                        <li>Онлайн-переводы и платежи</li>
+                        <li>Открытие вкладов и оформление кредитов</li>
+                        <li>Курсы валют и финансовые инструменты</li>
+                    </ul>
+                    <a href="#" class="learn-more">Узнать подробнее</a>
+                </div>
+                <div class="tab-content-img">
+                    <img src="img/content/tab-phone-desctop@1x.jpg" alt="картинка">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кредитный калькулятор -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <h1>Кредитный калькулятор</h1>
+            <div class="calculator-container">
+                <!-- <div class="steps">
+                    <div class="step active">Шаг 1. Цель кредита</div>
+                    <div class="step">Шаг 2. Введите параметры кредита</div>
+                    <div class="step">Шаг 3. Контактные данные</div>
+                </div> -->
+                <div class="first_part_calk">
+                    <div class="loan-purpose">
+                        <h3>Шаг 1. Цель кредита</h3>
+                        <div class="purpose-select">
+                            <select id="loan-purpose-select" class="purpose-dropdown">
+                                <option value="mortgage" selected>Ипотечное кредитование</option>
+                                <option value="auto">Автомобильное кредитование</option>
+                                <option value="consumer">Потребительский кредит</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-form">
+                        <div class="form-column">
+                            <h3>Шаг 2. Введите параметры кредита</h3>
+                            
+                            <div class="form-group">
+                                <label for="property-cost">Стоимость недвижимости</label>
+                                <div class="input-container">
+                                    <input type="number" id="property-cost" value="2000000" min="1200000" max="25000000">
+                                    <span class="input-range">От 1 200 000 до 25 000 000 рублей</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="initial-payment">Первоначальный взнос</label>
+                                <div class="input-container">
+                                    <input type="number" id="initial-payment" value="200000">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loan-term">Срок кредитования</label>
+                                <div class="input-container">
+                                    <input type="number" id="loan-term" value="5" min="1" max="30">
+                                    <span class="input-range">Употребление: 30 лет</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-column">
+                    <div class="result">
+                        <h3>Наше предложение</h3>
+                        <div class="all_part">
+                            <div class="1_part">
+                                <div class="result-item">
+                                    <span class="result-label">Сумма ипотеки:</span>
+                                    <span class="result-value" id="loan-amount">1 330 000 рублей</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Процентная ставка:</span>
+                                    <span class="result-value" id="interest-rate">9,40%</span>
+                                </div>
+                            </div>
+                            <div class="2_part">
+                                <div class="result-item">
+                                    <span class="result-label">Ежемесячный платеж:</span>
+                                    <span class="result-value" id="monthly-payment">27 868 рублей</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Необходимый доход:</span>
+                                    <span class="result-value" id="required-income">61 929 рублей</span>
+                                </div>
+                            </div>  
+                        </div>
+                        <button type="button" class="submit-btn zaya">Оформить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отделения банка -->
+    <section class="branches" id="branches">
+        <div class="container">
+            <h1>Отделения Лига Банка</h1>
+            <div class="map-container">
+                <div class="checkbox-banks">
+                    <div class="checkbox-bank">
+                        <input type="checkbox" name="russia" id="russia">
+                        <label for="russia">Россия</label>
+                    </div>
+                    <div class="checkbox-bank">
+                        <input type="checkbox" name="sng" id="sng">
+                        <label for="sng">СНГ</label>
+                    </div>
+                    <div class="checkbox-bank">
+                        <input type="checkbox" name="eu" id="eu">
+                        <label for="eu">Европа</label>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae1a3d8124104b7d8cd00cad58366c216394d1b39b1e582b50afb02a859901e37&amp;source=constructor" width="100%" height="678" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-column">
+                <ul>
+                    <li><img src="img/svg/logo.svg" alt="телефончик"></li>
+                    <li><a href="#">150015, г. Москва ул. Московская, д. 32 Генеральня лицензия Банка России №1050 &copy; Лига Банк, 2019</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Рассчитать кредит</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><img src="img/svg/mobile.svg" alt="телефончик"> *0904</li>
+                    <li><a href="#">Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><img src="img/svg/phone.svg" alt="телефончик"> *0904</li>
+                    <li><a href="#">Бесплатный для всех городов России</a></li>
+                </ul>
+                <!-- <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div> -->
+            </div>
+            <div class="footer-column">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>    
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 Лига Банк. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Добавьте этот код перед закрывающим тегом </body> -->
+    <div class="modal" id="applicationModal" style="max-height: 100%; overflow: auto;">
+        <div class="modal-content application-modal">
+            <span class="close-btn" id="closeApplicationModal"><i class="bi bi-x-lg"></i></span>
+            <div class="application-header">
+                <h2>Шаг 3. Оформление заявки</h2>
+            </div>
+            
+            <div class="application-summary">
+                <div class="summary-item">
+                    <span class="summary-label">Номер заявки:</span>
+                    <span class="summary-value" id="application-number">№ 0001</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Цель кредита:</span>
+                    <span class="summary-value" id="application-purpose">Ипотека</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Стоимость недвижимости:</span>
+                    <span class="summary-value" id="application-cost">2 000 000 рублей</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Первоначальный взнос:</span>
+                    <span class="summary-value" id="application-payment">200 000 рублей</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Срок кредитования:</span>
+                    <span class="summary-value" id="application-term">5 лет</span>
+                </div>
+            </div>
+            
+            <form class="application-form">
+                <div class="form-group">
+                    <label for="full-name">ФИО</label>
+                    <input type="text" id="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <button type="submit" class="submit-application-btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
